@@ -4,7 +4,7 @@ const RandomQuote = () => {
   const [quote, setQuote] = useState('');
 
   const fetchQuote = async () => {
-    const response = await fetch('http://localhost:5000/random-quote');
+    const response = await fetch('https://express-random-quotes-api.onrender.com/random-quote');
     const data = await response.json();
     setQuote(data.quote);
   };
